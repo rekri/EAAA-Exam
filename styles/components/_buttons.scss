@@ -1,0 +1,39 @@
+
+// Basic button styling
+button {
+	background-color: $buttonPrimary-color;
+	padding: .25rem; // With the 8pt (16pt) this should be 4px
+	box-shadow: 0px 0px 2px $button-shadow;
+
+	@media screen (min-width: $desktop){
+		padding: .5rem;
+
+		&:hover {
+			background-color: $buttonPrimary-color_hover;
+      box-shadow: 0px 2px 5px $button-shadow_hover;
+		}
+	}
+}
+
+// Defining a base button mixin for use when creating other buttons
+@mixin button($button-color: #B8B8B8, $button-color_hover: #D1D1D1, $button-width: null){
+	background-color: $buttonBase-color;
+	padding: .25rem; // With the 8pt (16pt) this should be 4px
+	box-shadow: 0px 0px 2px $dropshadow;
+
+	// button width
+	@if $button-width == full-width {
+		width: 100%;
+	} @else {
+		width: auto;
+	}
+
+	@media screen (min-width: $desktop){
+		padding: .5rem;
+
+		&:hover {
+			background-color: $button-color_hover;
+			box-shadow: 0px 2px 5px $dropshadow;
+		}
+	}
+}
