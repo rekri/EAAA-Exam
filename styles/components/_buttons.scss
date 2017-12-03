@@ -46,11 +46,8 @@ button {
 		&:hover {
 			background-color: $button-color_hover;
 			box-shadow: 0px 2px 5px $dropshadow;
+
+      // TODO: Create hover animation/translation for button
 		}
 	}
-}
-
-
-.btn-approved {
-
 }
