@@ -15,7 +15,10 @@ button {
 	}
 }
 
-// Defining a base button mixin for use when creating other buttons
+// Base button mixin
+  // The base of buttons are defined in a mixin.
+  // Please always use this mixin as a component,
+  // and extend the mixin if needed. But anywhere else.
 @mixin button($button-color: #B8B8B8, $button-color_hover: #D1D1D1, $dropshadow, $width: null){
 	background-color: $buttonBase-color;
 	padding: .25rem; // With the 8pt (16pt) this should be 4px
