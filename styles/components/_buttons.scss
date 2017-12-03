@@ -31,6 +31,15 @@ button {
 		width: auto;
 	}
 
+  // Alignment
+    // The alignment of content inside the button
+    // is always centered, unless specified as 'left'
+	@if $alignment == left {
+		text-align: left;
+	} @else {
+		text-align: center;
+	}
+
 	@media screen (min-width: $desktop){
 		padding: .5rem;
 
